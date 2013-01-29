@@ -36,8 +36,8 @@
     anArray = nil;
     _case1match = containsString(@" ");
     _case2match = hasCount(lessThan(@10));
-    _case3match = containsString(lessThanOrEqualTo(@5));          //REPLACE WITH YOUR OWN MATCHER
-    _case4match = is(empty());      //REPLACE WITH YOUR OWN MATCHER
+    _case3match = hasItems(@[@0],lessThanOrEqualTo(@9), nil);
+    _case4match = onlyContains(isNot(lessThanOrEqualTo(@9)), isNot(@0), nil);     //REPLACE WITH YOUR OWN MATCHER
 }
 
 //Case 1
