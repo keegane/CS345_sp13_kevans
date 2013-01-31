@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'TDD Waltz' target in the 'TDD Waltz' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
