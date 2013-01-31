@@ -23,18 +23,44 @@
     int ballIndex = 0;
     for (int frame = 0;frame < 10; ++frame)
     {
-        if (rolls[ballIndex] + rolls[ballIndex + 1] == 10)
+        if ([self isStrike:ballIndex])
         {
-            score += 10 + rolls[ballIndex + 2];
+            score += 10 + [self strikeBonus:ballIndex];
+            ++ballIndex;
+        }
+        else if ([self isSpare:ballIndex])
+        {
+            score += 10 + [self spareBonud:ballIndex];
         ballIndex +=2;
         }
         else {
-            score += rolls[ballIndex] + rolls[ballIndex+1];
+            score += [self sumOfBallsInFrame:ballIndex];
             ballIndex+=2;
         }
     }
         
     return score;
+    
+}
+
+-(BOOL)isStrike:(int)ballIndex{
+    return rolls[ballIndex] ==10;
+}
+
+    -(BOOL)isSpare:(int)ballIndex{
+        return rolls[ballIndex] + rolls[ballIndex + 1] ==10;
+}
+
+-(int)strikeBonus:(int)ballIndex {
+    return rolls[ballIndex +1] + rolls[ballIndex +2];
+}
+
+-(int)spareBonud:(int)ballIndex {
+    return rolls[ballIndex +2];
+}
+
+-(int)sumOfBallsInFrame:(int)ballIndex {
+    return rolls[ballIndex] + rolls[ballIndex +1];
 }
 
 @end

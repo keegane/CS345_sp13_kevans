@@ -62,6 +62,12 @@
     [game rollWithPinCount:5];
     [game rollWithPinCount:5];
 }
+
+- (void)rollStrike
+{
+    [game rollWithPinCount:10];
+}
+
 - (void)testOneSpare
 {
     [self rollSpare];
@@ -70,5 +76,10 @@
     STAssertEquals([game score], 16,nil);
 }
 
+-(void)testPerfectGame
+{
+    [self rollPins:10 times:12];
+    STAssertEquals([game score], 300,nil);
+}
 
 @end
