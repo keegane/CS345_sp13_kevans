@@ -47,6 +47,20 @@
     assertThat([sut nextReminderId], is(equalTo(@0)));
 }
 
+- (void)testNextReminderIdWithNoCurrentReminderIdInUserDefaultsSgouldSaveZeroInIUserDefaults
+{
+    // given
+    NSUserDefaults *mockUserDefaults = mock([NSUserDefaults class]);
+    Example *sut = [[Example alloc] initWithUserDefaults:mockUserDefaults];
+    [given ([mockUserDefaults objectForKey:@"currentReminderId"]) willReturn:nil];
+    // when
+    [sut nextReminderId];
+    
+    // then
+    [verify(mockUserDefaults) setObject:@0 forKey:@"currentReminderId"];
+}
+
+
 //- (void)tearDown
 //{
 //    <#tear down#>
