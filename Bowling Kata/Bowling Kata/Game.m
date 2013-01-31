@@ -8,14 +8,17 @@
 
 #import "Game.h"
 
-@implementation Game
+@implementation Game{
+    int score;
+}
 
 -(void)rollWithPinCount: (int)pins{
+    score += pins;
     
 }
 -(int)score
 {
-    return 0;
+    return score;
 }
 
 @end
