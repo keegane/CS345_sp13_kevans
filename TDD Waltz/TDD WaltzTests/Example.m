@@ -14,7 +14,7 @@
 
 - (NSNumber *)nextReminderId
 {
-    return @-1;
+    return @0;
 }
 
 @end
