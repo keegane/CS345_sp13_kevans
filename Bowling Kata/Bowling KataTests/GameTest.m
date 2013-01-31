@@ -33,14 +33,12 @@
 {
     [super setUp];
     game = [[Game alloc] init];
-
 }
 
 - (void)tearDown
 {
     game = nil;
     [super tearDown];
-    
 }
 
 -(void)rollPins:(int)pins times:(int)n{
@@ -58,6 +56,14 @@
 {
     [self rollPins:1 times:20];
     STAssertEquals([game score], 20,nil);
+}
+- (void)testOneSpare
+{
+    [game rollWithPinCount:5];
+    [game rollWithPinCount:5];
+    [game rollWithPinCount:3];
+    [self rollPins:0 times:17];
+    STAssertEquals([game score], 16,nil);
 }
 
 
