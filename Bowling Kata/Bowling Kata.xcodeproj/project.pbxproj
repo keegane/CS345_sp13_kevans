@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ACB43C6916BAFE2A001D6A72 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB43C6816BAFE2A001D6A72 /* Game.m */; };
+		E982A1F816B22F3C003E3548 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E982A1F716B22F3C003E3548 /* Cocoa.framework */; };
+		E982A20216B22F3C003E3548 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E982A20016B22F3C003E3548 /* InfoPlist.strings */; };
+		E982A20416B22F3C003E3548 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E982A20316B22F3C003E3548 /* main.m */; };
+		E982A20816B22F3C003E3548 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E982A20616B22F3C003E3548 /* Credits.rtf */; };
+		E982A20B16B22F3C003E3548 /* BKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E982A20A16B22F3C003E3548 /* BKAppDelegate.m */; };
+		E982A20E16B22F3C003E3548 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E982A20C16B22F3C003E3548 /* MainMenu.xib */; };
+		E982A21616B22F3C003E3548 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E982A21516B22F3C003E3548 /* SenTestingKit.framework */; };
+		E982A21716B22F3C003E3548 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E982A1F716B22F3C003E3548 /* Cocoa.framework */; };
+		E982A21F16B22F3C003E3548 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E982A21D16B22F3C003E3548 /* InfoPlist.strings */; };
+		E982A22D16B22FBF003E3548 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E982A22B16B22FBF003E3548 /* OCHamcrest.framework */; };
+		E982A22E16B22FBF003E3548 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E982A22C16B22FBF003E3548 /* OCMockito.framework */; };
+		E982A23016B22FD0003E3548 /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E982A22B16B22FBF003E3548 /* OCHamcrest.framework */; };
+		E982A23116B22FD0003E3548 /* OCMockito.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E982A22C16B22FBF003E3548 /* OCMockito.framework */; };
+		E982A23416B22FEE003E3548 /* GameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E982A23216B22FEE003E3548 /* GameTest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E982A21816B22F3C003E3548 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E982A1EA16B22F3C003E3548 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E982A1F216B22F3C003E3548;
+			remoteInfo = "Bowling Kata";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E982A22F16B22FCA003E3548 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				E982A23016B22FD0003E3548 /* OCHamcrest.framework in CopyFiles */,
+				E982A23116B22FD0003E3548 /* OCMockito.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		ACB43C6716BAFE2A001D6A72 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		ACB43C6816BAFE2A001D6A72 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		E982A1F316B22F3C003E3548 /* Bowling Kata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bowling Kata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E982A1F716B22F3C003E3548 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E982A1FA16B22F3C003E3548 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E982A1FB16B22F3C003E3548 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E982A1FC16B22F3C003E3548 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E982A1FF16B22F3C003E3548 /* Bowling Kata-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bowling Kata-Info.plist"; sourceTree = "<group>"; };
+		E982A20116B22F3C003E3548 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E982A20316B22F3C003E3548 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E982A20516B22F3C003E3548 /* Bowling Kata-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bowling Kata-Prefix.pch"; sourceTree = "<group>"; };
+		E982A20716B22F3C003E3548 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		E982A20916B22F3C003E3548 /* BKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKAppDelegate.h; sourceTree = "<group>"; };
+		E982A20A16B22F3C003E3548 /* BKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKAppDelegate.m; sourceTree = "<group>"; };
+		E982A20D16B22F3C003E3548 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E982A21416B22F3C003E3548 /* Bowling KataTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bowling KataTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E982A21516B22F3C003E3548 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E982A21C16B22F3C003E3548 /* Bowling KataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bowling KataTests-Info.plist"; sourceTree = "<group>"; };
+		E982A21E16B22F3C003E3548 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E982A22B16B22FBF003E3548 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = Frameworks/OCHamcrest.framework; sourceTree = "<group>"; };
+		E982A22C16B22FBF003E3548 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = Frameworks/OCMockito.framework; sourceTree = "<group>"; };
+		E982A23216B22FEE003E3548 /* GameTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTest.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E982A1F016B22F3C003E3548 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E982A1F816B22F3C003E3548 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E982A21016B22F3C003E3548 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E982A21616B22F3C003E3548 /* SenTestingKit.framework in Frameworks */,
+				E982A21716B22F3C003E3548 /* Cocoa.framework in Frameworks */,
+				E982A22D16B22FBF003E3548 /* OCHamcrest.framework in Frameworks */,
+				E982A22E16B22FBF003E3548 /* OCMockito.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E982A1E816B22F3C003E3548 = {
+			isa = PBXGroup;
+			children = (
+				E982A1FD16B22F3C003E3548 /* Bowling Kata */,
+				E982A21A16B22F3C003E3548 /* Bowling KataTests */,
+				E982A1F616B22F3C003E3548 /* Frameworks */,
+				E982A1F416B22F3C003E3548 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E982A1F416B22F3C003E3548 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E982A1F316B22F3C003E3548 /* Bowling Kata.app */,
+				E982A21416B22F3C003E3548 /* Bowling KataTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E982A1F616B22F3C003E3548 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E982A22B16B22FBF003E3548 /* OCHamcrest.framework */,
+				E982A22C16B22FBF003E3548 /* OCMockito.framework */,
+				E982A1F716B22F3C003E3548 /* Cocoa.framework */,
+				E982A21516B22F3C003E3548 /* SenTestingKit.framework */,
+				E982A1F916B22F3C003E3548 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E982A1F916B22F3C003E3548 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E982A1FA16B22F3C003E3548 /* AppKit.framework */,
+				E982A1FB16B22F3C003E3548 /* CoreData.framework */,
+				E982A1FC16B22F3C003E3548 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E982A1FD16B22F3C003E3548 /* Bowling Kata */ = {
+			isa = PBXGroup;
+			children = (
+				E982A20916B22F3C003E3548 /* BKAppDelegate.h */,
+				ACB43C6716BAFE2A001D6A72 /* Game.h */,
+				ACB43C6816BAFE2A001D6A72 /* Game.m */,
+				E982A20A16B22F3C003E3548 /* BKAppDelegate.m */,
+				E982A20C16B22F3C003E3548 /* MainMenu.xib */,
+				E982A1FE16B22F3C003E3548 /* Supporting Files */,
+			);
+			path = "Bowling Kata";
+			sourceTree = "<group>";
+		};
+		E982A1FE16B22F3C003E3548 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E982A1FF16B22F3C003E3548 /* Bowling Kata-Info.plist */,
+				E982A20016B22F3C003E3548 /* InfoPlist.strings */,
+				E982A20316B22F3C003E3548 /* main.m */,
+				E982A20516B22F3C003E3548 /* Bowling Kata-Prefix.pch */,
+				E982A20616B22F3C003E3548 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E982A21A16B22F3C003E3548 /* Bowling KataTests */ = {
+			isa = PBXGroup;
+			children = (
+				E982A23216B22FEE003E3548 /* GameTest.m */,
+				E982A21B16B22F3C003E3548 /* Supporting Files */,
+			);
+			path = "Bowling KataTests";
+			sourceTree = "<group>";
+		};
+		E982A21B16B22F3C003E3548 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E982A21C16B22F3C003E3548 /* Bowling KataTests-Info.plist */,
+				E982A21D16B22F3C003E3548 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E982A1F216B22F3C003E3548 /* Bowling Kata */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E982A22516B22F3C003E3548 /* Build configuration list for PBXNativeTarget "Bowling Kata" */;
+			buildPhases = (
+				E982A1EF16B22F3C003E3548 /* Sources */,
+				E982A1F016B22F3C003E3548 /* Frameworks */,
+				E982A1F116B22F3C003E3548 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bowling Kata";
+			productName = "Bowling Kata";
+			productReference = E982A1F316B22F3C003E3548 /* Bowling Kata.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E982A21316B22F3C003E3548 /* Bowling KataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E982A22816B22F3C003E3548 /* Build configuration list for PBXNativeTarget "Bowling KataTests" */;
+			buildPhases = (
+				E982A20F16B22F3C003E3548 /* Sources */,
+				E982A21016B22F3C003E3548 /* Frameworks */,
+				E982A21116B22F3C003E3548 /* Resources */,
+				E982A22F16B22FCA003E3548 /* CopyFiles */,
+				E982A21216B22F3C003E3548 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E982A21916B22F3C003E3548 /* PBXTargetDependency */,
+			);
+			name = "Bowling KataTests";
+			productName = "Bowling KataTests";
+			productReference = E982A21416B22F3C003E3548 /* Bowling KataTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E982A1EA16B22F3C003E3548 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BK;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = CS345;
+			};
+			buildConfigurationList = E982A1ED16B22F3C003E3548 /* Build configuration list for PBXProject "Bowling Kata" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E982A1E816B22F3C003E3548;
+			productRefGroup = E982A1F416B22F3C003E3548 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E982A1F216B22F3C003E3548 /* Bowling Kata */,
+				E982A21316B22F3C003E3548 /* Bowling KataTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E982A1F116B22F3C003E3548 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E982A20216B22F3C003E3548 /* InfoPlist.strings in Resources */,
+				E982A20816B22F3C003E3548 /* Credits.rtf in Resources */,
+				E982A20E16B22F3C003E3548 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E982A21116B22F3C003E3548 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E982A21F16B22F3C003E3548 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E982A21216B22F3C003E3548 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E982A1EF16B22F3C003E3548 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E982A20416B22F3C003E3548 /* main.m in Sources */,
+				E982A20B16B22F3C003E3548 /* BKAppDelegate.m in Sources */,
+				ACB43C6916BAFE2A001D6A72 /* Game.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E982A20F16B22F3C003E3548 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E982A23416B22FEE003E3548 /* GameTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E982A21916B22F3C003E3548 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E982A1F216B22F3C003E3548 /* Bowling Kata */;
+			targetProxy = E982A21816B22F3C003E3548 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E982A20016B22F3C003E3548 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E982A20116B22F3C003E3548 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E982A20616B22F3C003E3548 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E982A20716B22F3C003E3548 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		E982A20C16B22F3C003E3548 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E982A20D16B22F3C003E3548 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		E982A21D16B22F3C003E3548 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E982A21E16B22F3C003E3548 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E982A22316B22F3C003E3548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E982A22416B22F3C003E3548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E982A22616B22F3C003E3548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bowling Kata/Bowling Kata-Prefix.pch";
+				INFOPLIST_FILE = "Bowling Kata/Bowling Kata-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E982A22716B22F3C003E3548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bowling Kata/Bowling Kata-Prefix.pch";
+				INFOPLIST_FILE = "Bowling Kata/Bowling Kata-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E982A22916B22F3C003E3548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bowling Kata.app/Contents/MacOS/Bowling Kata";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bowling Kata/Bowling Kata-Prefix.pch";
+				INFOPLIST_FILE = "Bowling KataTests/Bowling KataTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E982A22A16B22F3C003E3548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bowling Kata.app/Contents/MacOS/Bowling Kata";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bowling Kata/Bowling Kata-Prefix.pch";
+				INFOPLIST_FILE = "Bowling KataTests/Bowling KataTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E982A1ED16B22F3C003E3548 /* Build configuration list for PBXProject "Bowling Kata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E982A22316B22F3C003E3548 /* Debug */,
+				E982A22416B22F3C003E3548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E982A22516B22F3C003E3548 /* Build configuration list for PBXNativeTarget "Bowling Kata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E982A22616B22F3C003E3548 /* Debug */,
+				E982A22716B22F3C003E3548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E982A22816B22F3C003E3548 /* Build configuration list for PBXNativeTarget "Bowling KataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E982A22916B22F3C003E3548 /* Debug */,
+				E982A22A16B22F3C003E3548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E982A1EA16B22F3C003E3548 /* Project object */;
+}
