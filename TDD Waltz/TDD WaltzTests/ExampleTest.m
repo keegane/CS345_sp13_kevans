@@ -35,17 +35,25 @@
     [super setUp];
     mockUserDefaults = mock([NSUserDefaults class]);
     sut = [[Example alloc] initWithUserDefaults:mockUserDefaults];
-    [given ([mockUserDefaults objectForKey:@"currentReminderId"]) willReturn:nil];
+}
+
+- (void)setUpUserDefaultsWithCurrentReminderId:(NSNumber *)current
+{
+    [given ([mockUserDefaults objectForKey:@"currentReminderId"]) willReturn:current];
 }
 
 - (void)testNextReminderIdWithNoCurrentReminderIdInUserDefaultsShouldReturnZero
 {
-
+    //given
+    [self setUpUserDefaultsWithCurrentReminderId:nil];
+    //then
     assertThat([sut nextReminderId], is(equalTo(@0)));
 }
 
 - (void)testNextReminderIdWithNoCurrentReminderIdInUserDefaultsSgouldSaveZeroInIUserDefaults
 {
+    //given
+    [self setUpUserDefaultsWithCurrentReminderId:nil];
     // when
     [sut nextReminderId];
     
@@ -55,8 +63,9 @@
 
 - (void)testNextReminderIdWithCurrentReminderIdInUserDefaultsShouldReturnOneGreater
 {
-    [given ([mockUserDefaults objectForKey:@"currentReminderId"]) willReturn:@3];
-    
+    //given
+    [self setUpUserDefaultsWithCurrentReminderId:@3];
+    //then
     assertThat([sut nextReminderId], is(equalTo(@4)));
 }
 
