@@ -59,11 +59,11 @@
 }
 - (void)testOneSpare
 {
-    [game rollWithPinCount:5];
-    [game rollWithPinCount:5];
-    [game rollWithPinCount:3];
-    [self rollPins:0 times:17];
-    STAssertEquals([game score], 16,nil);
+  [game rollWithPinCount:5];
+  [game rollWithPinCount:5];
+  [game rollWithPinCount:3];
+  [self rollPins:0 times:17];
+  STAssertEquals([game score], 16,nil);
 }
 
 
