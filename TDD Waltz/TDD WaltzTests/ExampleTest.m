@@ -72,12 +72,12 @@
 - (void)testNextReminderIdWithCurrentReminderIdInUserDefaultsShouldSaveOneGreaterInIUserDefaults
 {
     //given
-    [self setUpUserDefaultsWithCurrentReminderId:@3];
+  [self setUpUserDefaultsWithCurrentReminderId:@3];
     // when
-    [sut nextReminderId];
+  [sut nextReminderId];
     
     // then
-    [verify(mockUserDefaults) setObject:@4 forKey: @"currentReminderId"];
+  [verify(mockUserDefaults) setObject:@4 forKey: @"currentReminderId"];
 }
 
 - (void)tearDown

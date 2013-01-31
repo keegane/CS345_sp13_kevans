@@ -22,9 +22,11 @@
 {
     NSNumber *reminderId = [_userDefaults objectForKey: @"currentReminderId"];
     if (reminderId)
-        return @([reminderId integerValue] + 1);
-    [_userDefaults setObject:@0 forKey:@"currentReminderId"];
-    return @0;
+        reminderId = @([reminderId integerValue] + 1);
+    else
+        reminderId = @0;
+    [_userDefaults setObject:reminderId forKey:@"currentReminderId"];
+    return reminderId;
 }
 
 @end
