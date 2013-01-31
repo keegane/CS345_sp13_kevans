@@ -57,7 +57,7 @@
     [sut nextReminderId];
     
     // then
-    [verify(mockUserDefaults) setObject:@0 forKey:@"currentReminderId"];
+    [verify(mockUserDefaults) setObject:@0 forKey: @"currentReminderId"];
 }
 
 
