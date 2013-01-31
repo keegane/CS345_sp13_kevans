@@ -20,6 +20,9 @@
 
 - (NSNumber *)nextReminderId
 {
+    NSNumber *reminderId = [_userDefaults objectForKey: @"currentReminderId"];
+    if (reminderId)
+        return @([reminderId integerValue] + 1);
     [_userDefaults setObject:@0 forKey:@"currentReminderId"];
     return @0;
 }

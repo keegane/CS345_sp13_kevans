@@ -55,7 +55,7 @@
 
 - (void)testNextReminderIdWithCurrentReminderIdInUserDefaultsShouldReturnOneGreater
 {
-       [given ([mockUserDefaults objectForKey:@"currentReminderId"]) willReturn:@3];
+    [given ([mockUserDefaults objectForKey:@"currentReminderId"]) willReturn:@3];
     
     assertThat([sut nextReminderId], is(equalTo(@4)));
 }
