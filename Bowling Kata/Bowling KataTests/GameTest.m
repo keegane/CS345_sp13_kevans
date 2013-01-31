@@ -43,17 +43,20 @@
     
 }
 
+-(void)rollPins:(int)pins times:(int)n{
+    for (int i= 0; i < n; ++i)
+        [game rollWithPinCount:pins];
+}
+
 - (void)testGutterGame
 {
-    for (int i= 0; i < 20; ++i)
-        [game rollWithPinCount:0];
+    [self rollPins:0 times:20];
     STAssertEquals([game score], 0,nil);
 }
 
 - (void)testAllOnes
 {
-    for (int i= 0; i < 20; ++i)
-        [game rollWithPinCount:1];
+    [self rollPins:1 times:20];
     STAssertEquals([game score], 20,nil);
 }
 
