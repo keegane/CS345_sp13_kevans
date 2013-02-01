@@ -34,9 +34,9 @@
 {
     [super setUp];
     anArray = nil;
-    _case1match = containsString(@" ");
+    _case1match = anyOf(containsString(@", w"),containsString(@", W"),nil);
     _case2match = hasCount(lessThan(@10));
-    _case3match = containsString(lessThanOrEqualTo(@5));          //REPLACE WITH YOUR OWN MATCHER
+    _case3match = onlyContains(stringContainsInOrder(@"e",@"a",@"o",nil),nil);
     _case4match = is(empty());      //REPLACE WITH YOUR OWN MATCHER
 }
 
