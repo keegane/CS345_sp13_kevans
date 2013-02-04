@@ -37,7 +37,7 @@
     _case1match = anyOf(containsString(@", w"),containsString(@", W"),nil);
     _case2match = hasCount(lessThan(@10));
     _case3match = onlyContains(stringContainsInOrder(@"e",@"a",@"o",nil),nil);
-    _case4match = is(greaterThan(@9));
+    _case4match = hasItem(closeTo(42,1));
 }
 
 //Case 1
