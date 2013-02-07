@@ -37,7 +37,7 @@
 - (void)setUp
 {
     [super setUp];
-    sut = mock([NSArray class]);
+    sut = mock([NSDictionary class]);
 }
 
 - (void)tearDown
@@ -49,6 +49,7 @@
 - (void)testStubbedValueForKey
 {
     // given
+    [sut setKey:@"Bouffant"];
     //TODO: Prepare our S.U.T. to return 'Bouffant' as the value for 'Bulbous'
 
     // when
@@ -67,9 +68,9 @@
     for(NSMutableDictionary* element in bunchaStuff)
     {
         [element setValue:@"Lubber" forKey:@"Acadamia"];
-//        [element setValue:@"Blubber" forKey:@"Macadamia"]; //Should fail when this line is commented out, pass when it's not
+        [element setValue:@"Blubber" forKey:@"Macadamia"]; //Should fail when this line is commented out, pass when it's not
     }
-
+    [verifyCount(sut, atLeast(2)) setValue:nil forKey:nil];
     // then
     // TODO: Verify that our S.U.T. had a -setValue:forKey: message sent to it
 }
@@ -77,6 +78,8 @@
 -(void)testWhenStage
 {
     //when
+    [sut setKey:@"We"];
+    [sut setKey:@"Weather"];
     //TODO: Write code which will send the expected messages to the S.U.T.
 
     //then
