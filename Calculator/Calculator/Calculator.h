@@ -10,9 +10,9 @@
 
 @interface Calculator : NSObject
 
-@property char numberOnScreen;
-@property char numberAccumulated;
-@property char operationPending;
+@property NSNumber* numberOnScreen;
+@property NSNumber* numberAccumulated;
+@property NSString* operationPending;
 
 - (void)pressKey:(char) character;
 @end

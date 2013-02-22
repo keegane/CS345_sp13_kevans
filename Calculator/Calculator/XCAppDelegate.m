@@ -10,17 +10,17 @@
 
 @implementation XCAppDelegate
 
-int _calculator;
+NSString* _calculator;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    NSString* _calculator;
     
 }
 
 - (IBAction)buttonFive:(id)sender {
     NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:@"Five"]; 
+    [[self screen] setStringValue:@"Five"];
+    [_calculator pressKey: '5'];
     
 }
 
