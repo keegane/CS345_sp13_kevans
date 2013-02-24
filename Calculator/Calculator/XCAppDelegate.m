@@ -33,155 +33,137 @@
 }
 
 - (IBAction)buttonOne:(id)sender {
-    NSString* text=@"One";
-    char key = '1';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"One"
+                 keyChar:'1'];
 
 }
 
 - (IBAction)buttonTwo:(id)sender {
-    NSString* text=@"Two";
-    char key = '2';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Two"
+                 keyChar:'2'];
 
 }
 
 - (IBAction)buttonThree:(id)sender {
-    NSString* text=@"Three";
-    char key = '3';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Three"
+                 keyChar:'3'];
 
 }
 
 - (IBAction)buttonFour:(id)sender {
-    NSString* text=@"Four";
-    char key = '4';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Four"
+                 keyChar:'4'];
 
 }
 
 - (IBAction)buttonSix:(id)sender {
-    NSString* text=@"Six";
-    char key = '6';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-     [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Six"
+                 keyChar:'6'];
 
 }
 
 - (IBAction)buttonSeven:(id)sender {
-    NSString* text=@"Seven";
-    char key = '7';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Seven"
+                 keyChar:'7'];
 
 }
 
 - (IBAction)buttonEight:(id)sender {
-    NSString* text=@"Eight";
-    char key = '8';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Eight"
+                 keyChar:'8'];
 
 }
 
 - (IBAction)buttonNine:(id)sender {
-    NSString* text=@"Nine";
-    char key = '9';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Nine"
+                 keyChar:'9'];
 
 }
 
 - (IBAction)buttonZero:(id)sender {
-    NSString* text=@"Zero";
-    char key = '0';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Zero"
+                 keyChar:'0'];
 
 }
 
 - (IBAction)buttonPeriod:(id)sender {
-    NSString* text=@"Period";
-    char key = '.';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Period"
+                 keyChar:'.'];
 
 }
 
 - (IBAction)buttonMod:(id)sender {
-    NSString* text=@"Mod";
-    char key = '%';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Mod"
+                 keyChar:'%'];
 
 }
 
 - (IBAction)buttonClear:(id)sender {
-    NSString* text=@"Clear";
-    char key = ' ';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Clear"
+                 keyChar:' '];
 
 }
 
 - (IBAction)buttonDivide:(id)sender {
-    NSString* text=@"Divide";
-    char key = '/';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Divide"
+                 keyChar:'/'];
 
 }
 
 - (IBAction)buttonMultiply:(id)sender {
-    NSString* text=@"Multiply";
-    char key = '*';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Multiply"
+                 keyChar:'*'];
 
 }
 
 - (IBAction)buttonPlus:(id)sender {
-    NSString* text=@"Plus";
-    char key = '+';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Plus"
+                 keyChar:'+'];
 
 }
 
 - (IBAction)buttonMinus:(id)sender {
-    NSString* text=@"Minus";
-    char key = '-';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
-
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Minus"
+                 keyChar:'-'];
 }
 
 - (IBAction)buttonEnter:(id)sender {
-    NSString* text=@"Enter";
-    char key = '=';
-    NSLog(@"Message %@ recieved by %@ with argument %@",NSStringFromSelector(_cmd),self,sender);
-    [[self screen] setStringValue:text];
-    [_calc pressKey: key];
+    [self buttonResponse:sender
+              actionSent:NSStringFromSelector(_cmd)
+                 keyText:@"Enter"
+                 keyChar:'='];
 
 }
 @end
