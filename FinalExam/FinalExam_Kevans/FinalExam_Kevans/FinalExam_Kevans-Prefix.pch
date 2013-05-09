@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'FinalExam_Kevans' target in the 'FinalExam_Kevans' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
