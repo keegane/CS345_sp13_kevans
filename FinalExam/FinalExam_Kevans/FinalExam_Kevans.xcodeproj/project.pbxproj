@@ -17,7 +17,6 @@
 		2A7E3B2817380EBC00975654 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7E3B0817380EBB00975654 /* Cocoa.framework */; };
 		2A7E3B3017380EBC00975654 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A7E3B2E17380EBC00975654 /* InfoPlist.strings */; };
 		2A7E3B3317380EBC00975654 /* FinalExam_KevansTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E3B3217380EBC00975654 /* FinalExam_KevansTests.m */; };
-		2A7E3B4817380EFC00975654 /* CSTDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E3B3E17380EFC00975654 /* CSTDocument.m */; };
 		2A7E3B4917380EFC00975654 /* CSTGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E3B4017380EFC00975654 /* CSTGameModel.m */; };
 		2A7E3B4A17380EFC00975654 /* CSTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E3B4517380EFC00975654 /* CSTLocation.m */; };
 		2A7E3B4B17380EFC00975654 /* CSTMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E3B4717380EFC00975654 /* CSTMove.m */; };
@@ -31,6 +30,8 @@
 		2A7E3B67173814E800975654 /* CSTBowlViewWhite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E3B66173814E800975654 /* CSTBowlViewWhite.m */; };
 		2A7E3B6A1738150800975654 /* CSTBowlViewBlack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E3B691738150800975654 /* CSTBowlViewBlack.m */; };
 		2A7E3B6D17381E9200975654 /* CSTBump.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E3B6C17381E9200975654 /* CSTBump.m */; };
+		2AC73C69173C2EED00DC596F /* CSTDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC73C68173C2EED00DC596F /* CSTDocument.m */; };
+		2AC73C6C173C2F3000DC596F /* CSTDontNameDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC73C6B173C2F3000DC596F /* CSTDontNameDocument.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A5449C8173C1C2D001B45CF /* CSTBoardViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTBoardViewDelegate.h; sourceTree = "<group>"; };
 		2A7E3B0517380EBB00975654 /* FinalExam_Kevans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalExam_Kevans.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7E3B0817380EBB00975654 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2A7E3B0B17380EBB00975654 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -63,8 +65,6 @@
 		2A7E3B2F17380EBC00975654 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A7E3B3117380EBC00975654 /* FinalExam_KevansTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinalExam_KevansTests.h; sourceTree = "<group>"; };
 		2A7E3B3217380EBC00975654 /* FinalExam_KevansTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinalExam_KevansTests.m; sourceTree = "<group>"; };
-		2A7E3B3D17380EFC00975654 /* CSTDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTDocument.h; sourceTree = "<group>"; };
-		2A7E3B3E17380EFC00975654 /* CSTDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTDocument.m; sourceTree = "<group>"; };
 		2A7E3B3F17380EFC00975654 /* CSTGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTGameModel.h; sourceTree = "<group>"; };
 		2A7E3B4017380EFC00975654 /* CSTGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTGameModel.m; sourceTree = "<group>"; };
 		2A7E3B4117380EFC00975654 /* CSTInterfaceGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTInterfaceGameModel.h; sourceTree = "<group>"; };
@@ -89,6 +89,10 @@
 		2A7E3B6B17381E9200975654 /* CSTBump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTBump.h; sourceTree = "<group>"; };
 		2A7E3B6C17381E9200975654 /* CSTBump.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTBump.m; sourceTree = "<group>"; };
 		2A7E3B6E17381F1500975654 /* CSTBumpHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTBumpHost.h; sourceTree = "<group>"; };
+		2AC73C67173C2EEC00DC596F /* CSTDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTDocument.h; sourceTree = "<group>"; };
+		2AC73C68173C2EED00DC596F /* CSTDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTDocument.m; sourceTree = "<group>"; };
+		2AC73C6A173C2F3000DC596F /* CSTDontNameDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTDontNameDocument.h; sourceTree = "<group>"; };
+		2AC73C6B173C2F3000DC596F /* CSTDontNameDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTDontNameDocument.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,8 +209,6 @@
 		2A7E3B3C17380ED800975654 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2A7E3B3D17380EFC00975654 /* CSTDocument.h */,
-				2A7E3B3E17380EFC00975654 /* CSTDocument.m */,
 				2A7E3B3F17380EFC00975654 /* CSTGameModel.h */,
 				2A7E3B4017380EFC00975654 /* CSTGameModel.m */,
 				2A7E3B4117380EFC00975654 /* CSTInterfaceGameModel.h */,
@@ -216,6 +218,8 @@
 				2A7E3B4517380EFC00975654 /* CSTLocation.m */,
 				2A7E3B4617380EFC00975654 /* CSTMove.h */,
 				2A7E3B4717380EFC00975654 /* CSTMove.m */,
+				2AC73C67173C2EEC00DC596F /* CSTDocument.h */,
+				2AC73C68173C2EED00DC596F /* CSTDocument.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -239,6 +243,9 @@
 		2A7E3B59173810BA00975654 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2A5449C8173C1C2D001B45CF /* CSTBoardViewDelegate.h */,
+				2AC73C6A173C2F3000DC596F /* CSTDontNameDocument.h */,
+				2AC73C6B173C2F3000DC596F /* CSTDontNameDocument.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -360,7 +367,6 @@
 			files = (
 				2A7E3B1517380EBB00975654 /* main.m in Sources */,
 				2A7E3B1C17380EBB00975654 /* CSTAppDelegate.m in Sources */,
-				2A7E3B4817380EFC00975654 /* CSTDocument.m in Sources */,
 				2A7E3B4917380EFC00975654 /* CSTGameModel.m in Sources */,
 				2A7E3B4A17380EFC00975654 /* CSTLocation.m in Sources */,
 				2A7E3B4B17380EFC00975654 /* CSTMove.m in Sources */,
@@ -368,6 +374,8 @@
 				2A7E3B67173814E800975654 /* CSTBowlViewWhite.m in Sources */,
 				2A7E3B6A1738150800975654 /* CSTBowlViewBlack.m in Sources */,
 				2A7E3B6D17381E9200975654 /* CSTBump.m in Sources */,
+				2AC73C69173C2EED00DC596F /* CSTDocument.m in Sources */,
+				2AC73C6C173C2F3000DC596F /* CSTDontNameDocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +565,7 @@
 				2A7E3B3817380EBC00975654 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A7E3B3917380EBC00975654 /* Build configuration list for PBXNativeTarget "FinalExam_KevansTests" */ = {
 			isa = XCConfigurationList;
@@ -565,6 +574,7 @@
 				2A7E3B3B17380EBC00975654 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

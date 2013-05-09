@@ -11,7 +11,8 @@
 
 @protocol CSTBumpHost <NSObject>
 -(BOOL) isColor:(NSString*) whichColor
-    legalAtBump:(CSPBump*) whichBump;
+    legalAtBump:(CSTBump*) whichBump;
+
 -(void)dropColor:(NSString*) whichColor
-        ontoBump:(CSPBump*) whichBump;
+        ontoBump:(CSTBump*) whichBump;
 @end

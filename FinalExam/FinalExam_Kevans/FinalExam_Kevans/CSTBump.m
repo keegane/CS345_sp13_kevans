@@ -22,9 +22,6 @@
 }
 
 
-
-/* Kyle's code */
-
 -(void)setToWhite{
     
     [self setStoneColor:@"White"];
@@ -43,8 +40,6 @@
     [self setStoneColor:@"Bump"];
     [self setImage:[NSImage imageNamed:@"Pente_Blank_Bump.png"]];
 }
-
-/* Keegan's code */
 
 
 -(NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender
@@ -100,7 +95,7 @@
     }
 }
 
-- (id)initWithFrame:(NSRect)frameRect andHost:(id <CSPBumpHost>)hostingBoard
+- (id)initWithFrame:(NSRect)frameRect andHost:(id <CSTBumpHost>)hostingBoard
 {
     self = [super initWithFrame:frameRect];
     if (self) {
