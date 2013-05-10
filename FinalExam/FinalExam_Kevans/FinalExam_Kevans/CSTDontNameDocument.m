@@ -8,7 +8,7 @@
 
 #import "CSTDontNameDocument.h"
 #import "CSTInterfaceGameModel.h"
-#import "CSTInterfaceMove.h"
+#import "CSTGameModel.h"
 #import "CSTMove.h"
 
 @implementation CSTDontNameDocument
@@ -19,7 +19,7 @@
 {
     self = [super init];
     if (self) {
-        //_myModel = [[CSTLocation alloc] init];
+        _myModel = [[CSTGameModel alloc] init];
         
         [(id)_myModel addObserver: self
                        forKeyPath:@"gameOverState"
@@ -32,7 +32,7 @@
 
 - (NSString *)windowNibName
 {
-    return @"CSPDocument";
+    return @"CSTDontNameDocument";
 }
 
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
@@ -104,9 +104,9 @@
     else
         thePlayer = CSTID_NOBODY;
     
-    //return [_myModel isLegalMove:[CSTMove :thePlayer
-    //                                               atX:x andY:y]];
-}
+    //CHECK THIS OUT
+    return [(id)_myModel isLegalMove:[CSTMove intiWithPlayer:thePlayer
+                                                         atX:x andY:y]];
 
 - (void)executeMoveBy:(NSString *)playerColor
                   atX:(NSUInteger)x
@@ -121,28 +121,29 @@
     else
         thePlayer = CSTID_NOBODY;
     
-    //[_myModel makeMove: thePlayer];
+    [_myModel makeMove:[CSTMove moveWithPlayer:thePlayer
+                                           atX:x andY:y]];
      
-     //[CSTMove moveWithPlayer:thePlayer
-     // atX:x andY:y]];
+     [CSTMove moveWithPlayer:thePlayer
+      atX:x andY:y]];
     
     
-    //[[self penteBoard] needsDisplay];
+    [[self penteBoard] needsDisplay];
     
 
-//- (NSString *)whosePieceIsAtX:(NSUInteger)x
-//                           andY:(NSUInteger)y
-//{
-//    CSPPlayerID pieceCode;
-//    pieceCode = [_myModel whosePieceIsAt:[[CSPLocation alloc] initWithX:x
-//                                                                   andY:y]];
-//    switch(pieceCode)
-//    {
-//        case CSTID_PlayerOh return @"black";
-//        case CSTID_PlayerEx: return @"white";
-//        case CSTID_NOBODY: return @"empty";
-//    }
-//}
+- (NSString *)whosePieceIsAtX:(NSUInteger)x
+                           andY:(NSUInteger)y
+{
+    CSPPlayerID pieceCode;
+    pieceCode = [_myModel whosePieceIsAt:[[CSPLocation alloc] initWithX:x
+                                                                   andY:y]];
+    switch(pieceCode)
+    {
+        case CSTID_PlayerOh return @"black";
+        case CSTID_PlayerEx: return @"white";
+        case CSTID_NOBODY: return @"empty";
+    }
+}
 }
 @end
 
