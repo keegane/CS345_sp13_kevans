@@ -10,6 +10,8 @@
 #import "CSTInterfaceGameModel.h"
 #import "CSTGameModel.h"
 #import "CSTMove.h"
+#import "CSTInterfaceMove.h"
+#import "CSTInterfaceLocation.h"
 
 @implementation CSTDontNameDocument
 {
@@ -72,6 +74,7 @@
     {
         case CSTGO_WinnerEx: tempWinner = @"Black"; break;
         case CSTGO_WinnerOh: tempWinner = @"White"; break;
+        case CSTGO_GameNotOver: break;
         case CSTGO_CatsGame: break;
     }
     
@@ -105,9 +108,12 @@
         thePlayer = CSTID_NOBODY;
     
     //CHECK THIS OUT
-    return [(id)_myModel isLegalMove:[CSTMove intiWithPlayer:thePlayer
-                                                         atX:x andY:y]];
-
+    return [_myModel isLegalMove:[CSTMove initWithPlayer:thePlayer
+                                                     atX:x andY:y]];
+                                  
+}
+                                  
+                                  
 - (void)executeMoveBy:(NSString *)playerColor
                   atX:(NSUInteger)x
                  andY:(NSUInteger)y
@@ -121,17 +127,17 @@
     else
         thePlayer = CSTID_NOBODY;
     
-    [_myModel makeMove:[CSTMove moveWithPlayer:thePlayer
+    [_myModel makeMove:[CSTMove initWithPlayer:thePlayer
                                            atX:x andY:y]];
      
      [CSTMove moveWithPlayer:thePlayer
       atX:x andY:y]];
     
     
-    [[self penteBoard] needsDisplay];
+    // [[self penteBoard] needsDisplay];
     
 
-- (NSString *)whosePieceIsAtX:(NSUInteger)x
+- (CSTPlayerID)whosePieceIsAtX:(NSUInteger)x
                            andY:(NSUInteger)y
 {
     CSPPlayerID pieceCode;
