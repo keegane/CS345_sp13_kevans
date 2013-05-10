@@ -9,13 +9,13 @@
 
 #import <Cocoa/Cocoa.h>
 #import "CSTBoardViewDelegate.h"
-//#import "CSTBoardView.h"
+#import "CSTBoardView.h"
 
 @interface CSTDontNameDocument : NSDocument <CSTBoardViewDelegate>
 
 @property (weak) IBOutlet NSTextField *whiteCounter;
 @property (weak) IBOutlet NSTextField *blackCounter;
-//@property (weak) IBOutlet CSPBoardView *penteBoard;
+@property (weak) IBOutlet CSTBoardView *ticTacToeBoard;
 
 -(void)popupGameOverAlertWithWinner:(NSString*) winnerName;
 @end

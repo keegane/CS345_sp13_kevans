@@ -10,8 +10,6 @@
 #import "CSTInterfaceGameModel.h"
 #import "CSTGameModel.h"
 #import "CSTMove.h"
-#import "CSTInterfaceMove.h"
-#import "CSTInterfaceLocation.h"
 
 @implementation CSTDontNameDocument
 {
@@ -61,14 +59,12 @@
     return YES;
 }
 
-//TODO: (KVO) When a gameOverState change happens, pop up an alert
-
 -(void)observeValueForKeyPath:(NSString *)keyPath
                      ofObject:(id)object
                        change:(NSDictionary *)change
                       context:(void *)context
 {
-    //1 - figure out winner
+    //1 ***** figure out winner
     NSString *tempWinner;
     switch([_myModel gameOverState])
     {
@@ -78,7 +74,6 @@
         case CSTGO_CatsGame: break;
     }
     
-    //2 -translate that and pop up
     [self popupGameOverAlertWithWinner:tempWinner];
     
 }
@@ -99,9 +94,6 @@
               andY:(NSUInteger)y
 {
     CSTPlayerID thePlayer;
-    CSTMove *theMove;
-    
-    [theMove initWithPlayer:thePlayer atX:x andY:y];
     
     if([playerColor isEqualToString:@"white"])
         thePlayer = CSTID_PlayerEx;
@@ -110,9 +102,7 @@
     else
         thePlayer = CSTID_NOBODY;
     
-    //CHECK THIS OUT
-    return [_myModel isLegalMove:theMove];
-            
+    return [_myModel isLegalMove:[[CSTMove alloc] initWithPlayer:thePlayer atX:x andY:y]];
 }
 
     
@@ -124,7 +114,6 @@
                  andY:(NSUInteger)y
 {
     CSTPlayerID thePlayer;
-    CSTMove *theMove;
     
     if([playerColor isEqualToString:@"white"])
         thePlayer = CSTID_PlayerEx;
@@ -133,16 +122,10 @@
     else
         thePlayer = CSTID_NOBODY;
     
-    [theMove initWithPlayer:thePlayer atX:x andY:y];
-   
-    [_myModel makeMove:theMove];
+    [_myModel makeMove:[[CSTMove alloc] initWithPlayer:thePlayer atX:x andY:y]];
     
     
-    //[CSTMove moveWithPlayer:thePlayer
-    //                  atX:x andY:y];
-    
-    
-    // [[self penteBoard] needsDisplay];
+    [[self ticTacToeBoard] needsDisplay];
 }
 
 

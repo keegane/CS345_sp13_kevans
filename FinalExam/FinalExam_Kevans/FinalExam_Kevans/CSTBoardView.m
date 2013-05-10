@@ -37,8 +37,7 @@ const int GRID_SIZE = BOARD_SIZE/(GRID_SQUARES+1);
         
         CSTLocation* tempLocation;
         
-        //int offset = GRID_SIZE;
-        //int offset = GRID_SIZE/2;
+
         int numPlaces = 2;
         
         for (int x=0; x<numPlaces+1; x+=1)
@@ -47,8 +46,8 @@ const int GRID_SIZE = BOARD_SIZE/(GRID_SQUARES+1);
             tempRowArray = [NSMutableArray array];
             for (int y=0; y<numPlaces+1; y+=1)
             {
-                location.x = x*GRID_SIZE;//+offset;
-                location.y = y*GRID_SIZE;//+offset;
+                location.x = x*GRID_SIZE;
+                location.y = y*GRID_SIZE;
                 vJPBRect = NSMakeRect(location.x, location.y, GRID_SIZE, GRID_SIZE);
                 tempBump = [[CSTBump alloc] initWithFrame:vJPBRect
                                                   andHost:self];
