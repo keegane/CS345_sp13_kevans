@@ -72,8 +72,8 @@
     NSString *tempWinner;
     switch([_myModel gameOverState])
     {
-        case CSTGO_WinnerEx: tempWinner = @"Black"; break;
-        case CSTGO_WinnerOh: tempWinner = @"White"; break;
+        case CSTGO_WinnerOh: tempWinner = @"Black"; break;
+        case CSTGO_WinnerEx: tempWinner = @"White"; break;
         case CSTGO_GameNotOver: break;
         case CSTGO_CatsGame: break;
     }
@@ -99,6 +99,9 @@
               andY:(NSUInteger)y
 {
     CSTPlayerID thePlayer;
+    CSTMove *theMove;
+    
+    [theMove initWithPlayer:thePlayer atX:x andY:y];
     
     if([playerColor isEqualToString:@"white"])
         thePlayer = CSTID_PlayerEx;
@@ -108,10 +111,12 @@
         thePlayer = CSTID_NOBODY;
     
     //CHECK THIS OUT
-    return [_myModel isLegalMove:[CSTMove initWithPlayer:thePlayer
-                                                     atX:x andY:y]];
-                                  
+    return [_myModel isLegalMove:theMove];
+            
 }
+
+    
+
                                   
                                   
 - (void)executeMoveBy:(NSString *)playerColor
@@ -119,6 +124,7 @@
                  andY:(NSUInteger)y
 {
     CSTPlayerID thePlayer;
+    CSTMove *theMove;
     
     if([playerColor isEqualToString:@"white"])
         thePlayer = CSTID_PlayerEx;
@@ -127,30 +133,33 @@
     else
         thePlayer = CSTID_NOBODY;
     
-    [_myModel makeMove:[CSTMove initWithPlayer:thePlayer
-                                           atX:x andY:y]];
-     
-     [CSTMove moveWithPlayer:thePlayer
-      atX:x andY:y]];
+    [theMove initWithPlayer:thePlayer atX:x andY:y];
+   
+    [_myModel makeMove:theMove];
+    
+    
+    //[CSTMove moveWithPlayer:thePlayer
+    //                  atX:x andY:y];
     
     
     // [[self penteBoard] needsDisplay];
-    
+}
 
-- (CSTPlayerID)whosePieceIsAtX:(NSUInteger)x
-                           andY:(NSUInteger)y
-{
-    CSPPlayerID pieceCode;
-    pieceCode = [_myModel whosePieceIsAt:[[CSPLocation alloc] initWithX:x
-                                                                   andY:y]];
-    switch(pieceCode)
+
+- (NSString *)getPlayerColorAtX:(NSUInteger)x
+andY:(NSUInteger)y
     {
-        case CSTID_PlayerOh return @"black";
-        case CSTID_PlayerEx: return @"white";
-        case CSTID_NOBODY: return @"empty";
+        CSTPlayerID pieceCode;
+        pieceCode = [_myModel whosePieceIsAt:[[CSTLocation alloc] initWithX:x
+                                                                       andY:y]];
+        switch(pieceCode)
+        {
+            case CSTID_PlayerOh: return @"black";
+            case CSTID_PlayerEx: return @"white";
+            case CSTID_NOBODY: return @"empty";
+        }
     }
-}
-}
+
 @end
 
 

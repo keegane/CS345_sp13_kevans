@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0B36E5173DAFEA005610A1 /* CSTBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0B36E4173DAFEA005610A1 /* CSTBoardView.m */; };
 		2A7E3B0917380EBB00975654 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7E3B0817380EBB00975654 /* Cocoa.framework */; };
 		2A7E3B1317380EBB00975654 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A7E3B1117380EBB00975654 /* InfoPlist.strings */; };
 		2A7E3B1517380EBB00975654 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E3B1417380EBB00975654 /* main.m */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A0B36E3173DAFEA005610A1 /* CSTBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTBoardView.h; sourceTree = "<group>"; };
+		2A0B36E4173DAFEA005610A1 /* CSTBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTBoardView.m; sourceTree = "<group>"; };
 		2A5449C8173C1C2D001B45CF /* CSTBoardViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTBoardViewDelegate.h; sourceTree = "<group>"; };
 		2A7E3B0517380EBB00975654 /* FinalExam_Kevans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalExam_Kevans.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7E3B0817380EBB00975654 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -236,6 +239,8 @@
 				2A7E3B6B17381E9200975654 /* CSTBump.h */,
 				2A7E3B6C17381E9200975654 /* CSTBump.m */,
 				2A7E3B6E17381F1500975654 /* CSTBumpHost.h */,
+				2A0B36E3173DAFEA005610A1 /* CSTBoardView.h */,
+				2A0B36E4173DAFEA005610A1 /* CSTBoardView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				2A7E3B6D17381E9200975654 /* CSTBump.m in Sources */,
 				2AC73C69173C2EED00DC596F /* CSTDocument.m in Sources */,
 				2AC73C6C173C2F3000DC596F /* CSTDontNameDocument.m in Sources */,
+				2A0B36E5173DAFEA005610A1 /* CSTBoardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
