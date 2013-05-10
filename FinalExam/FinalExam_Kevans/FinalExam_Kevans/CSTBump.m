@@ -72,7 +72,7 @@
     NSString* theColor = [self draggedColor:sender];
     BOOL dropAccepted = YES;
     
-    NSLog(@"Processing %@ drop into bump %@", theColor, self);
+    NSLog(@"Processing %@ drop onto bump %@", theColor, self);
     
     [_myBoard dropColor:theColor
                ontoBump:self];
