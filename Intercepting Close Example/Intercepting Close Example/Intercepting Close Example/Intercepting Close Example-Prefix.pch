@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Intercepting Close Example' target in the 'Intercepting Close Example' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
