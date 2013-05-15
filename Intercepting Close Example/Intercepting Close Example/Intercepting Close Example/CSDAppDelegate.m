@@ -12,15 +12,34 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-
-    NSButton *b = [[self window] standardWindowButton: NSWindowCloseButton];
-    [b setAction: @selector( loggedClose: )];
-    [b setTarget: self];
-    //[_window performClose:0];
+    [self canMove];
 }
+//{
+//    if([_ReadyToClose state] == NSOnState)
+//    {
+//        [_window setMovable:YES];
+//    }
+//    else if([_ReadyToClose state] == NSOffState)
+//    {
+//        [_window setMovable:NO];
+//    }
 
-- (void)performClose:(id)sender {
-    [self performClose:sender];
+//}
+-(void)canMove
+{
+    if([_CannotMoveWindow state] == NSOnState)
+    {
+        [_window setMovable:NO];
+    }
+    else if([_CannotMoveWindow state] == NSOffState)
+    {
+        [_window setMovable:YES];
+    }
+    
+    
 }
+//- (void)performClose:(id)sender {
+//    [self performClose:sender];
+//}
 
 @end

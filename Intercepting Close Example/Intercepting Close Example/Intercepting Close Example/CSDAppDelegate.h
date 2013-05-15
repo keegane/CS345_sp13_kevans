@@ -11,6 +11,6 @@
 @interface CSDAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSButton *ReadyToClose;
+@property (assign) IBOutlet NSButton *CannotMoveWindow;
 
 @end
